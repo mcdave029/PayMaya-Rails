@@ -1,24 +1,24 @@
-# PayMayaRails
-Short description and motivation.
+# PayMaya-Rails
+PayMaya API wrapper for Ruby on Rails Applications
 
 ## Usage
-How to use my plugin.
+```ruby
+# Depedends on the api needs if its the public_key or secret_key
+client = PayMaya::API::Client.new(token: key)
+api = PayMaya::API::Endpoint::PaymentsRRN.new(rrn: request_reference_number)
+client.get(api: api) # This will produce Response
+```
 
 ## Installation
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'pay_maya_rails'
+gem 'paymaya', git: 'https://github.com/mcdave029/PayMaya-Rails'
 ```
 
 And then execute:
 ```bash
 $ bundle
-```
-
-Or install it yourself as:
-```bash
-$ gem install pay_maya_rails
 ```
 
 ## Contributing
