@@ -6,16 +6,30 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
+    addressable (2.7.0)
+      public_suffix (>= 2.0.2, < 5.0)
+    crack (0.4.3)
+      safe_yaml (~> 1.0.0)
+    hashdiff (1.0.1)
     minitest (5.14.1)
+    public_suffix (4.0.5)
     rake (13.0.1)
+    safe_yaml (1.0.5)
+    vcr (6.0.0)
+    webmock (3.8.3)
+      addressable (>= 2.3.6)
+      crack (>= 0.3.2)
+      hashdiff (>= 0.4.0, < 2.0.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  minitest
+  minitest (~> 5.14.1)
   paymaya!
-  rake
+  rake (~> 13.0.1)
+  vcr (~> 6.0.0)
+  webmock (~> 3.8.3)
 
 BUNDLED WITH
    2.1.4

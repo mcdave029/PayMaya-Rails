@@ -4,7 +4,7 @@ PayMaya API wrapper for Ruby on Rails Applications
 ## Usage
 ```ruby
 # Depedends on the api needs if its the public_key or secret_key
-client = PayMaya::API::Client.new(token: key)
+client = PayMaya::API::Client.new(key: key)
 api = PayMaya::API::Endpoint::PaymentsRRN.new(rrn: request_reference_number)
 client.get(api: api) # This will produce Response
 ```

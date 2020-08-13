@@ -1,0 +1,71 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://pg-sandbox.paymaya.com/payments/v1/payment-rrns/SampleRRN
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - pg-sandbox.paymaya.com
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic c2stWDhxb2xZank2MmtJekVicjBRUksxaDRiNEtEVkhhTmN3TVlrMzlqSW5TbDo=
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Thu, 13 Aug 2020 09:18:00 GMT
+      Server:
+      - Apache
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '53'
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate, max-age=0
+      Pragma:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - ''
+      Access-Control-Allow-Methods:
+      - ''
+      Access-Control-Allow-Headers:
+      - ''
+      Access-Control-Expose-Headers:
+      - ''
+      Etag:
+      - W/"35-KsY6TGtuCCKF7SbJHP8CQw"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Kong-Upstream-Latency:
+      - '20'
+      X-Kong-Proxy-Latency:
+      - '8'
+      Via:
+      - kong/0.9.7
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"code":"PY0009","message":"Payment does not exist."}'
+  recorded_at: Thu, 13 Aug 2020 09:18:00 GMT
+recorded_with: VCR 6.0.0

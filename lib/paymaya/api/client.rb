@@ -6,14 +6,14 @@ require 'net/http'
 
 module PayMaya
   module API
-    PRODUCTION_BASE_URL = 'https://pg.paymaya.com'
-    STAGING_BASE_URL = 'https://pg-sandbox.paymaya.com'
-
     # Client class for initializing api requests
     class Client
-      attr_reader :token, :version, :sandbox
-      def initialize(token:, version: 'v1', sandbox: true)
-        @token = token
+      PRODUCTION_BASE_URL = 'https://pg.paymaya.com'
+      STAGING_BASE_URL = 'https://pg-sandbox.paymaya.com'
+
+      attr_reader :key, :version, :sandbox
+      def initialize(key:, version: 'v1', sandbox: true)
+        @key = key
         @version = version
         @sandbox = sandbox
       end
@@ -37,15 +37,15 @@ module PayMaya
         URI.parse(base_url + api.endpoint(version: version))
       end
 
-      def auth_token
-        @auth_token ||= Base64.strict_encode64("#{token}:")
+      def token
+        @token ||= Base64.strict_encode64("#{key}:")
       end
 
       def start(request:, uri:)
         options = { use_ssl: uri.scheme == 'https' }
 
         request.add_field('Content-Type', 'application/json')
-        request.add_field('Authorization', "Basic #{auth_token}")
+        request.add_field('Authorization', "Basic #{token}")
 
         Net::HTTP.start(uri.hostname, uri.port, options) do |http|
           http.request(request)

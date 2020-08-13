@@ -13,5 +13,7 @@ gemspec
 
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
-gem 'minitest'
-gem 'rake'
+gem 'minitest', '~> 5.14.1'
+gem 'rake', '~> 13.0.1'
+gem 'vcr', '~> 6.0.0'
+gem 'webmock', '~> 3.8.3'
