@@ -6,12 +6,16 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
+    minitest (5.14.1)
+    rake (13.0.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  minitest
   paymaya!
+  rake
 
 BUNDLED WITH
    2.1.4

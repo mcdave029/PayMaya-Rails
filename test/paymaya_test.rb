@@ -1,7 +1,7 @@
 require 'test_helper'
 
-class PayMaya::Test < ActiveSupport::TestCase
-  test "truth" do
-    assert_kind_of Module, PayMayaRails
+describe PayMaya do
+  it 'truth' do
+    assert_kind_of Module, PayMaya
   end
 end
