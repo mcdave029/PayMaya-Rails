@@ -19,12 +19,6 @@ module PayMaya
       def success?
         @success ||= error.nil?
       end
-
-      def object
-        return unless success?
-
-        @object ||= OpenStruct.new(hash_body)
-      end
     end
   end
 end
