@@ -25,7 +25,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Thu, 13 Aug 2020 09:18:00 GMT
+      - Fri, 20 Nov 2020 13:55:14 GMT
       Server:
       - Apache
       Content-Type:
@@ -57,7 +57,7 @@ http_interactions:
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains
       X-Kong-Upstream-Latency:
-      - '20'
+      - '11'
       X-Kong-Proxy-Latency:
       - '8'
       Via:
@@ -67,5 +67,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"code":"PY0009","message":"Payment does not exist."}'
-  recorded_at: Thu, 13 Aug 2020 09:18:00 GMT
+  recorded_at: Fri, 20 Nov 2020 13:55:14 GMT
 recorded_with: VCR 6.0.0

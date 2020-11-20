@@ -8,12 +8,16 @@ module PayMaya
 
       def initialize(response:, api_code:)
         @api_code = api_code
-        @hash_body = JSON.parse(response.body)
+        @hash_body = JSONHash.parse(response.body)
         return if response.is_a?(Net::HTTPSuccess)
 
         @error = Error.new(api_code: api_code,
                            error: @hash_body['message'] || @hash_body['error'],
-                           code: @hash_body['code'])
+                           code: response.code)
+      rescue JSONHash::Error => e
+        @error = Error.new(api_code: api_code,
+                           error: e.message,
+                           code: response.code)
       end
 
       def success?

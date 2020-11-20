@@ -1,0 +1,78 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://pg-sandbox.paymaya.com/checkout/v1/checkouts
+    body:
+      encoding: UTF-8
+      string: '{"totalAmount":{"value":100,"currency":"PHP","details":{"discount":0,"serviceCharge":0,"shippingFee":0,"tax":0,"subtotal":100}},"buyer":{"firstName":"John","middleName":"Paul","lastName":"Doe","birthday":"1995-10-24","customerSince":"1995-10-24","sex":"M","contact":{"phone":"+639181008888","email":"merchant@merchantsite.com"},"shippingAddress":{"firstName":"John","middleName":"Paul","lastName":"Doe","phone":"+639181008888","email":"merchant@merchantsite.com","line1":"6F
+        Launchpad","line2":"Reliance Street","city":"Mandaluyong City","state":"Metro
+        Manila","zipCode":"1552","countryCode":"PH","shippingType":"ST"},"billingAddress":{"line1":"6F
+        Launchpad","line2":"Reliance Street","city":"Mandaluyong City","state":"Metro
+        Manila","zipCode":"1552","countryCode":"PH"}},"items":[{"name":"Canvas Slip
+        Ons","quantity":1,"code":"CVG-096732","description":"Shoes","amount":{"value":100,"details":{"discount":0,"serviceCharge":0,"shippingFee":0,"tax":0,"subtotal":100}},"totalAmount":{"value":100,"details":{"discount":0,"serviceCharge":0,"shippingFee":0,"tax":0,"subtotal":100}}}],"redirectUrl":{"success":"https://www.merchantsite.com/success","failure":"https://www.merchantsite.com/failure","cancel":"https://www.merchantsite.com/cancel"},"requestReferenceNumber":"1551191039","metadata":{}}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - pg-sandbox.paymaya.com
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic cGstWjBPU3pMdkljT0kyVUl2RGhkVEdWVmZSU1NlaUdTdG5jZXF3VUU3bjBBaDo=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 20 Nov 2020 13:52:50 GMT
+      Server:
+      - Apache
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate, max-age=0
+      Pragma:
+      - no-cache
+      Vary:
+      - X-HTTP-Method-Override,Accept-Encoding
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - ''
+      Access-Control-Allow-Methods:
+      - ''
+      Access-Control-Allow-Headers:
+      - ''
+      Access-Control-Expose-Headers:
+      - ''
+      Etag:
+      - W/"a2-CrolXwpHKqhi14D6D1MHJw-gzip"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Kong-Upstream-Latency:
+      - '364'
+      X-Kong-Proxy-Latency:
+      - '5'
+      Via:
+      - kong/0.9.7
+      Content-Length:
+      - '137'
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: '{"checkoutId":"17ac2e7f-fd45-487a-a01a-f6dc6082677d","redirectUrl":"https://payments-web-sandbox.paymaya.com/v2/checkout?id=17ac2e7f-fd45-487a-a01a-f6dc6082677d"}'
+  recorded_at: Fri, 20 Nov 2020 13:52:50 GMT
+recorded_with: VCR 6.0.0

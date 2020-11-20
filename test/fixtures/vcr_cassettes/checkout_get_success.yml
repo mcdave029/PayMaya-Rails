@@ -1,0 +1,79 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://pg-sandbox.paymaya.com/checkout/v1/checkouts/0a812155-c6c5-44c0-a803-5585ee29fbe9
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - pg-sandbox.paymaya.com
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic c2stWDhxb2xZank2MmtJekVicjBRUksxaDRiNEtEVkhhTmN3TVlrMzlqSW5TbDo=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 20 Nov 2020 14:01:46 GMT
+      Server:
+      - Apache
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate, max-age=0
+      Pragma:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - ''
+      Access-Control-Allow-Methods:
+      - ''
+      Access-Control-Allow-Headers:
+      - ''
+      Access-Control-Expose-Headers:
+      - ''
+      Etag:
+      - W/"9ad-2hyLYnHu1lrxj59oZ1KcLA-gzip"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Kong-Upstream-Latency:
+      - '68'
+      X-Kong-Proxy-Latency:
+      - '6'
+      Via:
+      - kong/0.9.7
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '1031'
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"0a812155-c6c5-44c0-a803-5585ee29fbe9","items":[{"name":"Canvas
+        Slip Ons","quantity":"1","code":"CVG-096732","description":"Shoes","amount":{"value":100,"details":{"discount":"0","serviceCharge":"0","shippingFee":"0","tax":"0","subtotal":"100"}},"totalAmount":{"value":100,"details":{"discount":"0","serviceCharge":"0","shippingFee":"0","tax":"0","subtotal":"100"}}}],"metadata":{},"requestReferenceNumber":"1551191039","receiptNumber":"134cdd201640","createdAt":"2020-11-20T13:39:13.000Z","updatedAt":"2020-11-20T13:51:32.000Z","paymentScheme":"master-card","expressCheckout":true,"refundedAmount":"0","canPayPal":false,"expiredAt":"2020-11-20T14:39:13.000Z","status":"COMPLETED","paymentStatus":"PAYMENT_SUCCESS","paymentDetails":{"responses":{"efs":{"paymentTransactionReferenceNo":"140fb845-7c8e-454e-b55c-134cdd201640","status":"SUCCESS","receipt":{"transactionId":"9fa3820b-387e-45af-97d0-861740889d08","receiptNo":"134cdd201640","approval_code":"00001234","approvalCode":"00001234"},"payer":{"fundingInstrument":{"card":{"cardNumber":"512345******2346","expiryMonth":"12","expiryYear":"2025"}}},"amount":{"total":{"currency":"PHP","value":100}},"created_at":"2020-11-20T13:51:32.716Z"}},"paymentAt":"2020-11-20T13:51:32.000Z","3ds":false},"buyer":{"contact":{"phone":"+639181008888","email":"merchant@merchantsite.com"},"firstName":"John","lastName":"Doe","middleName":"Paul","billingAddress":{"line1":"6F
+        Launchpad","line2":"Reliance Street","city":"Mandaluyong City","state":"Metro
+        Manila","zipCode":"1552","countryCode":"PH"},"shippingAddress":{"line1":"6F
+        Launchpad","line2":"Reliance Street","city":"Mandaluyong City","state":"Metro
+        Manila","zipCode":"1552","countryCode":"PH"}},"merchant":{"currency":"PHP","email":"paymentgatewayteam@paymaya.com","locale":"en","homepageUrl":"http://www.paymaya.com","isEmailToMerchantEnabled":false,"isEmailToBuyerEnabled":false,"isPaymentFacilitator":false,"isPageCustomized":true,"supportedSchemes":["Mastercard","Visa","JCB"],"canPayPal":false,"payPalEmail":null,"payPalWebExperienceId":null,"expressCheckout":true,"name":"PayMaya
+        Developers Portal"},"totalAmount":{"amount":"100","currency":"PHP","details":{"discount":"0","serviceCharge":"0","shippingFee":"0","tax":"0","subtotal":"100"}},"redirectUrl":{"success":"https://www.merchantsite.com/success","failure":"https://www.merchantsite.com/failure","cancel":"https://www.merchantsite.com/cancel"},"transactionReferenceNumber":"140fb845-7c8e-454e-b55c-134cdd201640"}'
+  recorded_at: Fri, 20 Nov 2020 14:01:46 GMT
+recorded_with: VCR 6.0.0
