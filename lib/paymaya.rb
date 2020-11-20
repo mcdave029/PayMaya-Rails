@@ -8,10 +8,20 @@ module PayMaya
     autoload :Client, 'paymaya/api/client'
     autoload :Response, 'paymaya/api/response'
     autoload :Error, 'paymaya/api/error'
+    autoload :JSONHash, 'paymaya/api/json_hash'
 
     # Endpoints
     module Endpoint
-      autoload :PaymentsRRN, 'paymaya/api/endpoint/payments_rrn'
+      # Payments
+      module Payment
+        autoload :GetRRN, 'paymaya/api/endpoint/payment/get_rrn'
+      end
+
+      # Checkouts
+      module Checkout
+        autoload :Create, 'paymaya/api/endpoint/checkout/create'
+        autoload :Get, 'paymaya/api/endpoint/checkout/get'
+      end
     end
   end
 end
